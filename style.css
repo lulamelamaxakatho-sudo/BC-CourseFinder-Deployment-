@@ -1,0 +1,372 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7fb;
+    text-align: center;
+}
+
+header {
+    background-color: #000000e0;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+h1{
+    margin: 10px 0 5px;
+    font-size: 36px;
+}
+
+header p{
+    margin: 0;
+    font-size: 16px;
+    color: #cccccc;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #b51f5e;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s, transform 0.2s;
+    margin-bottom: 15px;
+}
+
+/* ✅ ADDED: .btn hover — darkens magenta and lifts button */
+.btn:hover {
+    background: #c0115a;
+    transform: translateY(-2px);
+}
+
+#chat-box {
+    width: 30%;
+    height: 500px;
+    margin: auto;
+    background: white;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    justify-content: right;
+    align-items: flex-end;
+    margin-top: 20px;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+/* ✅ ADDED: nav link hover — turns magenta on hover */
+.nav-bar a:hover {
+    color: #e8176e;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+li{
+    display: inline-block;
+    margin: 10px;
+    justify-content: right;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    margin-top: 35px;
+    /*margin-top: 10px;
+    padding-top: 10px;*/
+    width: 55px;
+    height: 40px;
+}
+
+.courses{
+    display: grid;
+    max-width: 100%;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    padding: 20px;
+    gap: 20px;
+}
+
+.card{
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
+    border: 3px solid transparent;
+}
+
+/* ✅ UPDATED: card hover — adds magenta border + stronger shadow */
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(232, 23, 110, 0.25);
+    border-color: #00b4d8;
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h2{
+    padding: 15px;
+    color: #b51f5e;
+}
+
+section{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+section h2{
+    color: #0d0d0d;
+}
+
+#user-input{
+    width: 25%;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+/* ✅ ADDED: input focus — magenta border when user clicks into the field */
+#user-input:focus {
+    outline: none;
+    border-color: #e8176e;
+}
+
+.btn-send{
+    height: 35px;
+    width: 70px;
+    margin-left: 5px;
+    border-radius: 10px;
+    color: white;
+    background: #e8176e;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* ✅ ADDED: send button hover — darkens magenta and lifts */
+.btn-send:hover {
+    background: #c0115a;
+    transform: translateY(-2px);
+}
+
+.responds-block{
+    margin-bottom: 15px;
+}
+
+.chat-area {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background: #f0f0f0;
+    border-radius: 15px;
+}
+
+.message {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.quick-action{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.quick-btn {
+    background: #b51f5e;
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    border: none;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* ✅ ADDED: quick action button hover — darkens and lifts */
+.quick-btn:hover {
+    background: #c0115a;
+    transform: translateY(-2px);
+}
+
+.container{
+    margin: auto;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #0d0d0d;
+    color: #cccccc;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+    border-radius: 15px 15px 0 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+.footer-col h4 {
+    color: #b51f5e;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+
+.footer-col p {
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0 0 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-col ul li {
+    display: block;
+    margin: 0;
+}
+
+.footer-col ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #b51f5e;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.footer-social a {
+    color: #cccccc;
+    font-size: 13px;
+    text-decoration: none;
+    background: #1e1e1e;
+    padding: 6px 10px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.footer-social a:hover {
+    background: #b51f5e;
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #2a2a2a;
+    padding-top: 16px;
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-bottom a {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #b51f5e;
+}
+
+/* ===== ABOUT PAGE ===== */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.about-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border: 3px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(232, 23, 110, 0.2);
+    border-color: #00b4d8;
+}
+
+.about-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.about-card h3 {
+    color: #b51f5e;
+    margin: 0 0 10px;
+    font-size: 17px;
+}
+
+.about-card p {
+    color: #444;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
